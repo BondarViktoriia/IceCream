@@ -13,9 +13,30 @@
   </head>
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/header.html"></include>
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/header.html"></include>
+    <include src="./partials/example.html"></include> -->
 
+<section class="gallery">
+  <ul>
+    <li>
+                          <source srcset="
+                                                  ./images/prime354x294.jpg    1x,
+                                                  ./images/prime354x294@2x.jpg 2x
+                                                " type="image/jpeg" media="(min-width: 768px) and (max-width: 1199px)" />
+                          
+                          <source srcset="
+                                                  ./images/prime370x294.jpg       1x,
+                                                  ./images/prime370x294@2x.jpg 2x
+                                                " type="image/jpg" media="(min-width: 1200px)" />
+                          <img srcset="
+                                                  ./images/prime354x294.jpg ,
+                                                  ./images/prime450x294.jpg
+                                                " src="./images/prime370x294.jpg" alt="Наушники" />
+                          </picture>
+    </li>
+
+  </ul>
+</section>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>
